@@ -9,6 +9,6 @@
     <cn.lightsky.infiniteindicator.InfiniteIndicator
         android:id="@+id/infinite"
         android:layout_width="match_parent"
-        app:indicator_type="indicator_anim_circle"
+        app:indicator_type="indicator_default"
         android:layout_height="wrap_content"/>
 </RelativeLayout>
