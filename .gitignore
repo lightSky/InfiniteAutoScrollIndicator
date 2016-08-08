@@ -178,3 +178,5 @@ build/*
 .idea/*
 local.properties
 .iml
+
+bintray

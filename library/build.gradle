@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.1.0"
+version = "1.1.1"
 
 android {
     compileSdkVersion 23
@@ -12,8 +12,8 @@ android {
         resourcePrefix "lightsky"
         minSdkVersion 8
         targetSdkVersion 23
-        versionCode 110
-        versionName "1.1.0"
+        versionCode 111
+        versionName "1.1.1"
     }
     buildTypes {
         release {
@@ -37,13 +37,16 @@ android {
 
 //------------------------------------------------------------------------------------------
 
+Properties properties = new Properties()
+
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+def siteUrl = properties.getProperty("siteUrl") // 项目的主页
+
+def gitUrl = properties.getProperty("gitUrl")  // Git仓库的url
 
 
-def siteUrl = 'https://github.com/lightSky/InfiniteIndicator'      // 项目的主页
-
-def gitUrl = 'https://github.com/lightSky/InfiniteIndicator.git'   // Git仓库的url
-
-group = "cn.lightsky.infiniteindicator"      // Maven Group ID for the artifact，一般填你唯一的包名
+group = properties.getProperty("group")      // Maven Group ID for the artifact，一般填你唯一的包名
 
 install {
 
@@ -81,11 +84,11 @@ install {
 
                     developer {
 
-                        id 'lightsky'  //填写的一些基本信息
+                        id 'fengdianxun'  //填写的一些基本信息
 
-                        name 'lightsky'
+                        name 'fengdianxun'
 
-                        email 'lightsky.cn@gmail.com'
+                        email '731270777@qq.com'
 
                     }
 
@@ -141,9 +144,6 @@ artifacts {
 
 }
 
-Properties properties = new Properties()
-
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
 
