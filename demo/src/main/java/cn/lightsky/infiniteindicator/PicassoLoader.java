@@ -42,8 +42,7 @@ public class PicassoLoader implements ImageLoader {
         }
 
         requestCreator
-                .fit()
-                .tag(context)
+                .resize(ScreenUtil.getWidth(context),ScreenUtil.getHeightByRadio(context,1.6f))
                 .into(targetView);
 
     }

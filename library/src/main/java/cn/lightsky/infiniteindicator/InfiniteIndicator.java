@@ -11,6 +11,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.animation.Interpolator;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import java.lang.ref.WeakReference;
@@ -28,7 +29,7 @@ import cn.lightsky.infiniteindicator.page.Page;
  * Created by lightSky on 2014/12/22.
  * Thanks to: https://github.com/Trinea/android-auto-scroll-view-pager
  */
-public class InfiniteIndicator extends RelativeLayout implements RecyclingPagerAdapter.DataChangeListener {
+public class InfiniteIndicator extends FrameLayout implements RecyclingPagerAdapter.DataChangeListener {
     private final ScrollHandler handler;
     private PageIndicator mIndicator;
     private ViewPager mViewPager;
