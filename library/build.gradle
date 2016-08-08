@@ -45,6 +45,10 @@ def siteUrl = properties.getProperty("siteUrl") // 项目的主页
 
 def gitUrl = properties.getProperty("gitUrl")  // Git仓库的url
 
+def developerId = properties.getProperty("developerId")
+def developeName = properties.getProperty("developeName")
+def developeEmail = properties.getProperty("developeEmail")
+
 
 group = properties.getProperty("group")      // Maven Group ID for the artifact，一般填你唯一的包名
 
@@ -84,11 +88,11 @@ install {
 
                     developer {
 
-                        id 'fengdianxun'  //填写的一些基本信息
+                        id developerId  //填写的一些基本信息
 
-                        name 'fengdianxun'
+                        name developeName
 
-                        email '731270777@qq.com'
+                        email developeEmail
 
                     }
 
